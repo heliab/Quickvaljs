@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+<body>
+      <input type="text" value="" id="textbox">
+     <input type="submit" value="printValue" onclick="printValue()">
+     <input type="submit" value="isOnlyNumber" onclick="isOnlyNumber()">
+     <input type="submit" value="isAlphaNumeric" onclick="isAlphaNumeric()">
+    <input type="submit" value="isOnlyLetter" onclick="isOnlyLetter()">
+
+    <script>
+        /*Solo devuelve el valor del textbox*/
+        function printValue(){
+        var textboxValue=document.getElementById("textbox").value;
+            alert(textboxValue);
+        }
+        
+        function isOnlyNumber(){
+        var textboxValue=document.getElementById("textbox").value;
+            if(!isNaN(textboxValue)){
+                    alert(textboxValue);//ONly for button
+                    return true;
+                }
+            return false;
+        }
+        /*IsonlyText es interpretada como texto alfanumerico*/
+        function isAlphaNumeric(){
+            var textboxValue=document.getElementById("textbox").value;
+            if(isNaN(textboxValue)){
+                //alert(textboxValue); ONly for button
+            }
+        }
+        
+        /* only letters without numbers*/
+        function isOnlyLetter(){
+            var textboxValue=document.getElementById("textbox").value;
+            
+            var valueLenght=textboxValue.length;
+            
+            var i;
+            for(i=0;i<=valueLenght;i++)
+                {
+                    var singleValue=textboxValue.charAt(i);
+                    if(!isNaN(singleValue)){
+                        alert("A number is found =>" + singleValue);//Only For Button
+                        return false;
+                        break;
+                    }
+                    alert("Only letters")//Only For Button
+                   return  true; 
+                }
+        }
+        /* Validate email address */
+        function isMailValid(control){
+            var mailFormat=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+            
+
+        }
+        /* Validate max and minimun lenght */
+        /* Check checkboxes*/
+        /**Reordar que la validacion se puede hacer al presionar el boton o al momento de digitar */
+            /* Recordar validar */
+        /* Validate Dates */
+        /* Validate audio volumes*/
+        /* Validate files weight */
+        /* Validate battery life */
+        /* Validate browsers */
+        /* Validate viewport */
+        /* Validate operative systems */
+        /* Validate time writing forms */
+        /* Validate time uploading documents */
+        /* Validate percent */
+        /* Validate checkbox checked (number or their values) likewise remaining non checked or checked */
+        /* Hide controls according to validation */
+        /* Valdate only number input*/
+        /* Validate min and max amount */
+        /* Change focus color */
+        /* Validate internet protocol */
+        /* Validate if its true say Verdadero or something else personalized, just pass the values*/
+        /* Allow user to define the type of exceoption it will throw */
+
+    </script>
+    
+</body>
+    
+</html>
